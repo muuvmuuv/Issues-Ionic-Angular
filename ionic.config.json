@@ -1,0 +1,10 @@
+{
+	"name": "angular-and-ionic-issues",
+	"type": "angular",
+	"integrations": {
+		"capacitor": {},
+		"cordova": {
+			"enabled": false
+		}
+	}
+}

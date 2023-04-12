@@ -19,46 +19,44 @@ import { IonicModule } from "@ionic/angular"
 				</a>
 			</header>
 
-			<ion-grid>
-				<form>
-					<ion-row>
-						<ion-col size="6">
-							<ion-row *ngFor="let c of count">
-								<ion-col size="6">
-									<ion-item>
-										<ion-label position="stacked">Lastname {{ c }}</ion-label>
-										<ion-input [name]="'lastname-' + c" type="text" placeholder="Insert" />
-									</ion-item>
-								</ion-col>
+			<form>
+				<ion-row>
+					<ion-col size="6">
+						<ion-row *ngFor="let c of count">
+							<ion-col size="6">
+								<ion-item>
+									<ion-label position="stacked">Lastname {{ c }}</ion-label>
+									<ion-input [name]="'lastname-' + c" type="text" placeholder="Insert" />
+								</ion-item>
+							</ion-col>
 
-								<ion-col size="6">
-									<ion-item>
-										<ion-label position="stacked">Firstname {{ c }}</ion-label>
-										<ion-input [name]="'firstname-' + c" type="text" placeholder="Insert" />
-									</ion-item>
-								</ion-col>
-							</ion-row>
-						</ion-col>
+							<ion-col size="6">
+								<ion-item>
+									<ion-label position="stacked">Firstname {{ c }}</ion-label>
+									<ion-input [name]="'firstname-' + c" type="text" placeholder="Insert" />
+								</ion-item>
+							</ion-col>
+						</ion-row>
+					</ion-col>
 
-						<ion-col size="6">
-							<ion-row>
-								<ion-col size="12">
-									<ion-item>
-										<ion-label position="stacked">Email</ion-label>
-										<ion-input name="email" type="text" placeholder="Insert" />
-									</ion-item>
-								</ion-col>
-								<ion-col size="12">
-									<ion-item>
-										<ion-label position="stacked">Address</ion-label>
-										<ion-input name="address" type="text" placeholder="Insert" />
-									</ion-item>
-								</ion-col>
-							</ion-row>
-						</ion-col>
-					</ion-row>
-				</form>
-			</ion-grid>
+					<ion-col size="6">
+						<ion-row>
+							<ion-col size="12">
+								<ion-item>
+									<ion-label position="stacked">Email</ion-label>
+									<ion-input name="email" type="text" placeholder="Insert" />
+								</ion-item>
+							</ion-col>
+							<ion-col size="12">
+								<ion-item>
+									<ion-label position="stacked">Address</ion-label>
+									<ion-input name="address" type="text" placeholder="Insert" />
+								</ion-item>
+							</ion-col>
+						</ion-row>
+					</ion-col>
+				</ion-row>
+			</form>
 		</ion-content>
 	`,
 })
