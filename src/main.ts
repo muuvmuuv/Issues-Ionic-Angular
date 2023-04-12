@@ -31,6 +31,10 @@ bootstrapApplication(AppComponent, {
 		importProvidersFrom(
 			IonicModule.forRoot({
 				mode: "ios",
+				scrollPadding: true,
+				scrollAssist: true,
+				inputBlurring: true,
+				inputShims: true,
 			})
 		),
 	],
