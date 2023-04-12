@@ -20,44 +20,48 @@ import { IonicModule } from "@ionic/angular"
 			</header>
 
 			<ion-grid>
-				<ion-row>
-					<ion-col size="6">
-						<ion-row>
-							<ion-col size="6">
-								<ion-item>
-									<ion-label position="stacked">Lastname</ion-label>
-									<ion-input type="text" placeholder="Insert" />
-								</ion-item>
-							</ion-col>
+				<form>
+					<ion-row>
+						<ion-col size="6">
+							<ion-row *ngFor="let c of count">
+								<ion-col size="6">
+									<ion-item>
+										<ion-label position="stacked">Lastname {{ c }}</ion-label>
+										<ion-input [name]="'lastname-' + c" type="text" placeholder="Insert" />
+									</ion-item>
+								</ion-col>
 
-							<ion-col size="6">
-								<ion-item>
-									<ion-label position="stacked">Firstname</ion-label>
-									<ion-input type="text" placeholder="Insert" />
-								</ion-item>
-							</ion-col>
-						</ion-row>
-					</ion-col>
+								<ion-col size="6">
+									<ion-item>
+										<ion-label position="stacked">Firstname {{ c }}</ion-label>
+										<ion-input [name]="'firstname-' + c" type="text" placeholder="Insert" />
+									</ion-item>
+								</ion-col>
+							</ion-row>
+						</ion-col>
 
-					<ion-col size="6">
-						<ion-row>
-							<ion-col size="12">
-								<ion-item>
-									<ion-label position="stacked">Email</ion-label>
-									<ion-input type="text" placeholder="Insert" />
-								</ion-item>
-							</ion-col>
-							<ion-col size="12">
-								<ion-item>
-									<ion-label position="stacked">Address</ion-label>
-									<ion-input type="text" placeholder="Insert" />
-								</ion-item>
-							</ion-col>
-						</ion-row>
-					</ion-col>
-				</ion-row>
+						<ion-col size="6">
+							<ion-row>
+								<ion-col size="12">
+									<ion-item>
+										<ion-label position="stacked">Email</ion-label>
+										<ion-input name="email" type="text" placeholder="Insert" />
+									</ion-item>
+								</ion-col>
+								<ion-col size="12">
+									<ion-item>
+										<ion-label position="stacked">Address</ion-label>
+										<ion-input name="address" type="text" placeholder="Insert" />
+									</ion-item>
+								</ion-col>
+							</ion-row>
+						</ion-col>
+					</ion-row>
+				</form>
 			</ion-grid>
 		</ion-content>
 	`,
 })
-export class Issue27166PageComponent {}
+export class Issue27166PageComponent {
+	count = Array.from({ length: 10 }, (_, i) => i)
+}

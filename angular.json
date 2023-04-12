@@ -13,12 +13,12 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist",
+						"outputPath": "www",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"assets": ["src/assets"],
 						"styles": ["src/styles.scss"],
-						"tsConfig": "tsconfig.json",
+						"tsConfig": "tsconfig.app.json",
 						"scripts": []
 					},
 					"configurations": {
@@ -32,7 +32,6 @@
 							"optimization": true,
 							"outputHashing": "all",
 							"sourceMap": false,
-							"extractCss": true,
 							"namedChunks": false,
 							"aot": true,
 							"extractLicenses": true,
@@ -44,8 +43,7 @@
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"options": {
-						"browserTarget": "demo:build",
-						"host": "0.0.0.0"
+						"browserTarget": "demo:build"
 					},
 					"configurations": {
 						"production": {
